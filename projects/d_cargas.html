@@ -1,0 +1,119 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://kit.fontawesome.com/cc2c5fa6b9.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.css">
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <link rel="stylesheet" href="../css/d_cargas.css">
+    <title>Cargas</title>
+    <link rel="stylesheet" href="../css/d_cargas.css">
+    <link rel="stylesheet" href="../css/base.css">
+</head>
+<header>
+    <div class="header-content">
+        <div class="logo">
+            <a href="d_landing.html"><img src="../assets/images/demo/Logo_D&A_transparent.png" alt="" width="200px" height="85px"></a>
+        </div>
+        <div class="menu">
+            <nav>
+                <ul>
+                    <li id="li-inicio"><a href="d_landing.html" id="inicio">Inicio</a></li>
+                    <li id="li-reportes"><a href="d_reportes.html" id="reportes">Reportes</a></li>
+                    <li id="li-cargas"><a href="d_cargas.html" id="cargas">Cargas</a></li>
+                    <li><a href="#" title="Salir"><i class="fa-solid fa-power-off"></i></a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header>
+<body>
+    <div class="loader" id="loader" style="display: none;">
+        <div class="wrapper">
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="shadow"></div>
+            <div class="shadow"></div>
+            <div class="shadow"></div>
+            <span>Validando</span>
+        </div>
+    </div>
+    <div class="container-upload">
+        <table id="table_id" class="display">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Proyecto</th>
+                    <th>Descripción</th>
+                    <th>Acción</th>
+                </tr>
+            </thead>
+            <tbody id="datos">
+                <tr>
+                    <td>1</td>
+                    <td>Cuotas SISO</td>
+                    <td>Sección para cargas de archivos</td>
+                    <td>
+                        <center>
+                            <button id="open" class="upload-cuotas">Seleccionar un archivo</button>
+                        </center>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>2</td>
+                    <td>Notas de Crédito</td>
+                    <td>Carga de NDC</td>
+                    <td>
+                        <center>
+                            <div id="div_file">
+                                <p id="texto">Seleccionar un archivo</p>
+                                <input type="file" name="file" onchange="ndc()" class="btnFileNDC" accept=".xlsx" id="btn_whls">
+                            </div>
+                        </center>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div id="modal_container" class="modal-container">
+        <div class="modal">
+            <form action="" id="formulario" enctype="multipart/form-data">
+                <h1>¿A qué categoría pertenece el archivo?</h1><br>
+                <h3>Selecciona una categoría</h3>
+                <select class="js-example-basic-single" name="categoria" id="categoria">
+                    <option value="" selected disabled>Seleccione una opción...</option>
+                    <option value="AJUSTES">Ajustes</option>
+                    <option value="BACALAR">Bacalar</option>
+                    <option value="DEOS">Deos</option>
+                    <option value="DRESSINGS">Dressings</option>
+                    <option value="FACE">Face</option>
+                    <option value="H&B">H&B</option>
+                    <option value="HAIR">Hair</option>
+                    <option value="HISTORICO">Histórico</option>
+                    <option value="ICE CREAM">Ice Cream</option>
+                    <option value="KNORR CALDOS">CCA</option>
+                    <option value="KNORR SOPAS">Sopas</option>
+                    <option value="LIQUID IV">Liquid IV</option>
+                    <option value="MAIZENA">Maizena</option>
+                    <option value="SKIN CLEANSING">Skin Cleansing</option>
+                </select><br><br>
+                <input type="file" name="file" accept=".csv" class="Cuotas" onchange="Validar('.Cuotas')"><br><br>
+                <button id="close" class="close">Cerrar</button>
+                <button type="submit" id="enviar" class="close">Envíar</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="../js/d_cargas.js"></script>
+</body>
+</html>

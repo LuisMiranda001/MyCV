@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/cc2c5fa6b9.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <title>Reportes</title>
+    <link rel="stylesheet" href="../css/d_reportes.css">
+    <link rel="stylesheet" href="../css/base.css">
+</head>
+
+<header>
+    <div class="header-content">
+        <div class="logo">
+            <a href="d_landing.html"><img src="../assets/images/demo/Logo_D&A_transparent.png" alt="" width="200px" height="85px"></a>
+        </div>
+        <div class="menu">
+            <nav>
+                <ul>
+                    <li id="li-inicio"><a href="d_landing.html" id="inicio">Inicio</a></li>
+                    <li id="li-reportes"><a href="d_reportes.html" id="reportes">Reportes</a></li>
+                    <li id="li-cargas"><a href="d_cargas.html" id="cargas">Cargas</a></li>
+                    <li><a href="#" title="Salir"><i class="fa-solid fa-power-off"></i></a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header>
+
+<body>
+    <main>
+        <input type="radio" id="Business_Fuel_Growth" name="categories" value="Business_Fuel_Growth" checked>
+        <input type="radio" id="Financial_Strategy" name="categories" value="Financial_Strategy">
+        <input type="radio" id="Operational_Exellence" name="categories" value="Operational_Exellence">
+        <input type="radio" id="Promo_Planning" name="categories" value="Promo_Planning">
+
+        <div class="container-category">
+            <label for="Business_Fuel_Growth">Business Performance</label>
+            <label for="Financial_Strategy">Financial Reports</label>
+            <label for="Operational_Exellence">Executional Excellence</label>
+            <label for="Promo_Planning">Promo Planning</label>
+        </div>
+        <div class="container-box">
+
+            <a href="#">
+                <div class="box" data-category="Business_Fuel_Growth">
+                    <img src="../assets/images/demo/Sell In Historico.png" alt="">
+                    <h2>Sell In Histórico</h2>
+                    <div class="container-p">
+                        <p>Este informe presenta un detallado análisis de las ventas históricas de la compañía. El reporte ofrece una visión completa de las tendencias de ventas, los productos más vendidos, los períodos de mayor y menor demanda.</p>
+                    </div>
+                </div>
+            </a>
+
+            <a href="#">
+                <div class="box" data-category="Business_Fuel_Growth">
+                    <img src="../assets/images/demo/Avance de ventas.png" alt="">
+                    <h2>Avance de Ventas</h2>
+                    <div class="container-p">
+                        <p>En este apartado encontrarás información sobre la facturación o "Sell in", incluyendo un comparativo del mes actual en relación a la cuota establecida a nivel de cliente y director, así como de la categoría correspondiente.</p>
+                    </div>
+                </div>
+            </a>
+
+            <a href="#">
+                <div class="box" data-category="Business_Fuel_Growth">
+                    <img src="../assets/images/demo/Sell Out.png" alt="">
+                    <h2>Sell Out</h2>
+                    <div class="container-p">
+                        <p>Encontrarás comparativos históricos contra periodos anteriores a un nivel de detalle máximo, así como comparativa contra la cuota del mes actual.</p>
+                    </div>
+                </div>
+            </a>
+
+            <a href="#">
+            <div class="box" data-category="Financial_Strategy">
+                <img src="../assets/images/demo/P&L.png" alt="">
+                <h2>Profit & Loss 2021</h2>
+                <div class="container-p">
+                    <p>Información detallada sobre la situación financiera de la compañía, incluyendo comparativos contra el año anterior y contra escenarios previos de la planeación, así como KPIs de USG, GM, UOP, entre otros.</p>
+                </div>
+            </div>
+            </a>
+            
+            <a href="#">
+                <div class="box" data-category="Financial_Strategy">
+                    <img src="../assets/images/demo/Cartera.png" alt="">
+                    <h2>Cartera</h2>
+                    <div class="container-p">
+                        <p>Podrás consultar información sobre cuentas por cobrar, incluyendo el saldo en cartera a nivel de cliente y director, así como el envejecimiento de la deuda.</p>
+                    </div>
+                </div>
+            </a>
+            
+            <a href="#">
+                <div class="box" data-category="Operational_Exellence">
+                    <img src="../assets/images/demo/Eddgie.png" alt="">
+                    <h2>EDDGIE</h2>
+                    <div class="container-p">
+                        <p>Encontrarás análisis del comportamiento de nuestra ejecución en campo con KPIs de Image Recognition (OSA, SOS y QUORE) y PICOS.</p>
+                    </div>
+                </div>
+            </a>
+
+            <a href="#">
+                <div class="box" data-category="Promo_Planning">
+                    <img src="../assets/images/demo/Madrid-Lucy.png" alt="">
+                    <h2>TPM - Planning Simulator</h2>
+                    <div class="container-p">
+                        <p>Muestra el plan a aprobar para el siguiente ciclo promocional, solo incluye actividades en Planned, Base Plan Approved y Approved</p>
+                    </div>
+                </div>
+            </a>
+            
+            <a href="#">
+                <div class="box" data-category="Promo_Planning">
+                    <img src="../assets/images/demo/Madrid-Lucy.png" alt="">
+                    <h2>PERPC</h2>
+                    <div class="container-p">
+                        <p>Contiene el listado de todas las actividades promocionales pre-evaluadas y post-evaluadas automáticas y manuales</p>
+                    </div>
+                </div>
+            </a>
+
+        </div>
+    </main>
+</body>
+
+</html>
