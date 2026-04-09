@@ -68,9 +68,9 @@
         <div class="all-content">
             <!-- Details -->
             <section id="about-me" class="section-container">
-                <h3><span>Power Apps</span></h3>
-                <h1>Luna Cockpit – Access Request & Approval Automation Platform</h1>
-                <p>Enterprise service request solution built with Power Apps and Power Automate to manage access approvals, validations, and Active Directory group memberships.</p><br>
+                <h3><span>Databricks & Rest API</span></h3>
+                <h1>Backups & User Management</h1>
+                <p>Automated notebook backups, governance, and cost monitoring across multiple Databricks environments</p><br>
             </section>
             <!-- Project Summary -->
             <section class="section-container">
@@ -81,54 +81,42 @@
                 <br>
                 <h3><span>📌 Project context</span></h3>
                 <p>
-                    <b>Luna Cockpit</b> was a project fully led and developed by me as an internal solution for the <b>Brazil team</b>, focused on centralizing and automating <b>service requests</b>, with special emphasis on <b>access requests</b>.
-                    <br><br>Before this solution, access approvals were handled manually through emails and informal follow‑ups, resulting in delays, limited visibility, and poor traceability for both users and approvers.
+                    At Unilever, data teams operate multiple <b>Databricks Workspaces</b> across different <b>environments (DEV, QA, and PROD)</b>. <br>
+                    Over time, notebooks and jobs become unused, increasing costs, operational risk, and data governance challenges. <br><br>
+                    When a cleanup initiative was planned to remove unused assets and restrict access, a common enterprise concern emerged: <br>
+                    <span style="font-style: italic;">   👉 once notebooks or jobs are removed, users eventually claim that something critical was deleted.</span><br>
+                    The initial idea was to back up notebooks <b>manually</b>, which was not scalable considering there were <b>9 workspaces per environment</b>. <br>
                 </p>
                 <br>
                 <h3><span>🛠️ Implemented solution</span></h3>
                 <p>
-                    Luna Cockpit was built using <b>Power Apps</b>, structured with multiple menus. The core module was the <b>Access Request</b> feature. <br>
-                    Users submit the required information to request access, which is then stored in a <b>SharePoint List</b>. This action triggers a <b>Power Automate</b> flow that manages the entire ticket lifecycle automatically. <br>
-                    The solution includes validations, approvals, escalations, notifications, and status tracking with minimal manual intervention. <br><br>
-                    In addition to access requests, Luna Cockpit includes dedicated modules for personalized communication, user feedback, and a Learning Hub. <br>
-                    - The Contact module allows users to send structured messages to the corresponding support teams, including attachments and predefined routing. <br>
-                    - The Feedback module collects user satisfaction and comments to continuously improve the platform. <br>
-                    - The Learning Hub centralizes documentation, training materials, and user guidance related to Luna and other performance dashboards.
+                    I designed and implemented a <b>Python-based automation</b> using <b>Databricks REST APIs</b>, authenticating through <b>workspace API keys</b>. <br>
+                    <br>The script automatically retrieves: <br>
+                    - All notebooks <br>
+                    - Notebooks metadata <br>
+                    - Notebook creator information <br>
+                    <br>This solution allowed backing up an entire environment in approximately 30 minutes, covering DEV, QA, and PROD without manual intervention.<br>
                 </p>
                 <br>
+                <h3>💰 Cost Monitoring & Optimization</h3>
+                    <p>
+                        As part of the initiative, I also leveraged Databricks to develop a cost monitoring dashboard to: <br>
+                        - Track total costs by environment <br>
+                        - Detect cost spikes <br>
+                        - Analyze the root cause behind increases <br>
+
+                    This supported proactive optimization and cost‑aware decision‑making. <br><br>
+                    </p>
                 <h3><span>🔧 Key Learnings</span></h3>
                 <p>This project helped to:</p>
                 <ul>
-                    <li> - Automate access governance workflows</li>
-                    <li> - Improve traceability and user experience</li>
-                    <li> - Reduce approval times and manual intervention</li>
-                    <li> - Lead and deliver an enterprise solution independently</li>
-                    <li> - Continuous improvement through structured user feedback</li>
-                    <li> - Integrate Power Apps, Power Automate, SharePoint, and Active Directory into a unified system</li>
+                    <li> - Build trust with technical teams and leadership</li>
+                    <li> - Work with Databricks APIs at an operational level</li>
+                    <li> - Implement real backup and data governance strategies</li>
+                    <li> - Design automation for production-grade data platforms</li>
+                    <li> - Reduce risks related to access control and cost management</li>
                 </ul>
                 <br>
-                <h3><span>🧰 Technologies Used</span></h3>
-                <div class="tech-group">
-                    <h3>Low-Code / Automation</h3>
-                    <div class="tech-grid">
-                    <span>Power Apps</span>
-                    <span>Power Automate</span>
-                    </div>
-                </div>
-                <br>
-                <div class="tech-group">
-                    <h3>Data & Storage</h3>
-                    <div class="tech-grid">
-                    <span>Sharepoint Lists</span>
-                    </div>
-                </div>
-                <br>
-                <div class="tech-group">
-                    <h3>Identity & Access</h3>
-                    <div class="tech-grid">
-                    <span>Active Directory</span>
-                    </div>
-                </div>
             </section>
             <!-- Gallery -->
              <section class="section-container">
@@ -140,27 +128,22 @@
                 <div class="swiper mySwiper">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
-                            <img src="../assets/images/projects/powerapp1.jpeg" alt="">
-                            <div class="slide-caption">Luna Cockpit main dashboard with access to key modules</div>
+                            <img src="../assets/images/projects/db_1.png" alt="">
+                            <div class="slide-caption">Automated Databricks notebook backups organized by environment</div>
                         </div>
                         <div class="swiper-slide">
-                            <img src="../assets/images/projects/powerapp2.jpeg" alt="">
-                            <div class="slide-caption">Structured access request flow with business validation</div>
+                            <img src="../assets/images/projects/db_2.png" alt="">
+                            <div class="slide-caption">Structured backups grouped by Databricks workspace</div>
                         </div>
                         <div class="swiper-slide">
-                            <img src="../assets/images/projects/powerapp3.jpeg" alt="">
-                            <div class="slide-caption">Personalized communication module with routing and attachments</div>
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="../assets/images/projects/powerapp4.jpeg" alt="">
-                            <div class="slide-caption">User feedback collection for continuous improvement</div>
+                            <img src="../assets/images/projects/db_3.png" alt="">
+                            <div class="slide-caption">User‑level notebook ownership preserved for traceability and recovery</div>
                         </div>
                     </div>
                     <div class="swiper-button-next"></div>
                     <div class="swiper-button-prev"></div>
                     <div class="swiper-pagination"></div>
                 </div>
-             </section>
         </div>
     </div>
 
